@@ -10,7 +10,7 @@ export var speed = 400  # How fast the player will move.
 var screen_size: Vector2  # Size of the game window
 
 
-# Signal handlers
+# Signal handling
 func _on_Player_body_entered(body):
 	emit_signal("hit")
 	kill()

@@ -5,7 +5,7 @@ export var max_speed = 250  # Maximum speed range.
 var mob_types = ["walk", "swim", "fly"]
 
 
-# Signal handlers
+# Signal handling
 func _on_Visibility_screen_exited():
 	queue_free()
 
