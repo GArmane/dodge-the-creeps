@@ -72,4 +72,3 @@ func _process(delta: float):
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	hide()
