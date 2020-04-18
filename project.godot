@@ -15,8 +15,18 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Dodge-the-creeps"
+config/name="Dodge the Creeps"
 config/icon="res://icon.png"
+
+[audio]
+
+driver="PulseAudio"
+
+[display]
+
+window/size/width=480
+window/size/height=720
+window/size/resizable=false
 
 [rendering]
 
