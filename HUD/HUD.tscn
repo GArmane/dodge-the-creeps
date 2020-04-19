@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://HUD/HUD.gd" type="Script" id=1]
 
@@ -22,6 +22,12 @@ font_path = "res://HUD/fonts/Xolonium-Regular.ttf"
 [sub_resource type="DynamicFont" id=6]
 size = 64
 font_data = SubResource( 5 )
+
+[sub_resource type="InputEventAction" id=7]
+action = "ui_select"
+
+[sub_resource type="ShortCut" id=8]
+shortcut = SubResource( 7 )
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -62,6 +68,7 @@ margin_top = -152.0
 margin_right = 92.0
 margin_bottom = -68.0
 custom_fonts/font = SubResource( 6 )
+shortcut = SubResource( 8 )
 text = "Start"
 __meta__ = {
 "_edit_use_anchors_": false
