@@ -7,6 +7,8 @@ var score
 
 # Game handling
 func game_over():
+	$MusicPlayer.stop()
+	$DeathSound.play()
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$HUD.show_game_over()
@@ -16,6 +18,7 @@ func new_game():
 	score = 0
 	$HUD.update_score(score)
 	$HUD.show_message("Get Ready")
+	$MusicPlayer.play()
 	$StartTimer.start()
 	$Player.start($StartPosition.position)
 
