@@ -13,3 +13,4 @@ func _on_Visibility_screen_exited():
 # Callbacks
 func _ready():
 	$AnimatedSprite.animation = mob_types[randi() % mob_types.size()]
+	$AnimatedSprite.play()
