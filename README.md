@@ -1,2 +1,2 @@
-# dodge-the-creeps
+# Dodge the Creeps!
 Godot Engine tutorial game
