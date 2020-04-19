@@ -14,8 +14,6 @@ _data = {
 script = ExtResource( 1 )
 Mob = ExtResource( 2 )
 
-[node name="Player" parent="." instance=ExtResource( 3 )]
-
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
 
@@ -33,9 +31,19 @@ curve = SubResource( 1 )
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
 
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 480.0
+margin_bottom = 720.0
+color = Color( 0.054902, 0.0784314, 0.156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
 [node name="HUD" parent="." instance=ExtResource( 4 )]
-[connection signal="hit" from="Player" to="." method="_on_Player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
+[connection signal="hit" from="Player" to="." method="_on_Player_hit"]
 [connection signal="start_game" from="HUD" to="." method="_on_HUD_start_game"]
